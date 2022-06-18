@@ -1,6 +1,5 @@
 CC=g++
 CXX=g++
-RANLIB=ranlib
 
 LIBSRC=MapReduceFramework.cpp Barrier.h Barrier.cpp
 LIBOBJ=$(LIBSRC:.cpp=.o)
@@ -21,7 +20,6 @@ all: $(TARGETS)
 
 $(TARGETS): $(LIBOBJ)
 	$(AR) $(ARFLAGS) $@ $^
-	$(RANLIB) $@
 
 clean:
 	$(RM) $(TARGETS) $(OSMLIB) $(OBJ) $(LIBOBJ) *~ *core
